@@ -2,6 +2,8 @@ FROM node:10
 
 RUN apt-get update
 RUN apt-get install -y netcat
+RUN git config --global url.https://github.com/.insteadOf git://github.com/
+
 RUN apt-get clean
 
 WORKDIR /contracts

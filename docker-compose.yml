@@ -4,3 +4,10 @@ services:
     build: .
     command: "true"
     env_file: ./deploy/.env
+    networks:
+      - poa-network-gabriel
+
+networks:
+  poa-network-gabriel:
+    external:
+      name: poa-network-gabriel
