@@ -6,6 +6,9 @@ services:
     env_file: ./deploy/.env
     networks:
       - poa-network-gabriel
+    volumes:
+      - ./output/:/contracts/deploy/output/
+
 
 networks:
   poa-network-gabriel:

@@ -17,6 +17,7 @@ COPY ./deploy/package-lock.json ./deploy/
 RUN cd ./deploy; npm install; cd ..
 
 COPY . .
+RUN mkdir  ./deploy/output
 RUN npm run compile
 RUN bash flatten.sh
 
